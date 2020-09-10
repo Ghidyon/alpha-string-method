@@ -1,5 +1,3 @@
-//Function for Replacing String
-
 const replaceString = (word, search, replaceWith) => {
     const string = word;
     const length = string.length;
@@ -13,28 +11,23 @@ const replaceString = (word, search, replaceWith) => {
     console.log(replacedWord);
 }
 
-replaceString("Ghidyeeeon is a good boy", "e", "y");
+replaceString("Ghidyeeeon wants a mentor", "e", "y");
 
 
-//Function for Changing Case
 const changeCase = (sentence, caseType) => {
     const text = sentence;
     (caseType === "upper") ? console.log(text.toUpperCase()) :
         (caseType === "lower") ? console.log(text.toLowerCase()) : console.log(undefined);
 }
 
-changeCase("chris is a forex trader", "upper");
+changeCase("ghidyon wants to be a better programmer", "upper");
 
 
-
-//function for triming edges
 const trimEdges = sentence => console.log(sentence.trim());
 
-trimEdges("     java script         ");
+trimEdges("       java script         ");
 
 
-
-//function for extracting strings
 const extractString = (sentence, start, end) => {
     (start >= end) ? console.log(sentence) :
         console.log(sentence.slice(start, end));
@@ -43,9 +36,13 @@ const extractString = (sentence, start, end) => {
 extractString("ghidyon is feeling good", 0, 0);
 
 
+const getInitials = name => {
+    const nameArray = name.split(" ");
+    let initials = "";
+    for (let i = 0; i < nameArray.length; i++) {
+        initials += nameArray[i].charAt(0).toUpperCase();
+    }
+    console.log(initials);
+}
 
-//function for getting initials
-// const getInitials = name => 
-
-let name = "Ghidyon Akunana"
-console.log(name.split());
+getInitials("ghidyon son ");
